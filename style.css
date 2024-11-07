@@ -1,0 +1,77 @@
+* {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+body {
+  font-size: 32px;
+}
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  position: relative;
+  font-size: 48px;
+}
+
+.marker {
+  width: 100%;
+  height: 35%;
+  background-color: #e6e6fa;
+  position: absolute;
+  bottom: 5%;
+  z-index: -1;
+}
+
+.start-button {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 4px 60px;
+  outline: none;
+  border-radius: 60px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #696969;
+  text-decoration: none;
+}
+.start-button:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.question {
+  color: gray;
+}
+
+.clear {
+  color: #03a9f4;
+}
+
+.type-form-wrapper {
+  border-bottom: 1px solid gray;
+}
+
+.type-form {
+  text-align: center;
+  outline: none;
+  border: none;
+}
+
+.gauge-wrapper {
+  border: 1px solid;
+  height: 12px;
+}
+
+.gauge {
+  height: 12px;
+  transition: all 0.3s ease;
+}/*# sourceMappingURL=style.css.map */

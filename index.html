@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app" class="container">
+      <div class="title">
+        <h1>タイピング GAME</h1>
+        <div class="marker"></div>
+      </div>
+      <button
+        v-if="startFlg!=true"
+        class="start-button mb-20"
+        @click="gameStart"
+      >
+        START
+      </button>
+      <div v-if="startFlg">
+        <div class="question mb-20">{{ current_question }}</div>
+        <div v-if="current_question_count == question_counts" class="clear">
+          Clear
+        </div>
+        <div class="type-form-wrapper mb-20">
+          <input
+            id="type-form"
+            v-model="typeBox"
+            type="text"
+            class="type-form"
+          />
+        </div>
+
+        <div class="gauge-wrapper mb-20">
+          <div v-bind:style="styleObject" class="gauge"></div>
+        </div>
+        <div>{{ current_question_count }}/{{ question_counts }}</div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
